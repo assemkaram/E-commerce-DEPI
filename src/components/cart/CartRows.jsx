@@ -3,7 +3,7 @@ import bag from "../../assets/photo bag.png";
 
 function CartRows() {
   const [qty1, setQty1] = useState(1);
-  const [qty2, setQty2] = useState(2);
+  const [qty2, setQty2] = useState(1);
   const [qty3, setQty3] = useState(1);
 
   return (
