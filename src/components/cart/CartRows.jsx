@@ -1,6 +1,11 @@
+import { useState } from "react";
 import bag from "../../assets/photo bag.png";
 
 function CartRows() {
+  const [qty1, setQty1] = useState(1);
+  const [qty2, setQty2] = useState(2);
+  const [qty3, setQty3] = useState(1);
+
   return (
     <div className="cart-rows flex flex-col gap-4 max-w-page mx-auto mt-20 mb-20">
         {/* Row 1 */}
@@ -23,20 +28,22 @@ function CartRows() {
               type="button"
               aria-label="Decrease quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty1((q) => Math.max(1, q - 1))}
             >
               −
             </button>
-            <span className="min-w-8 text-center text-sm">1</span>
+            <span className="min-w-8 text-center text-sm">{qty1}</span>
             <button
               type="button"
               aria-label="Increase quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty1((q) => q + 1)}
             >
               +
             </button>
           </div>
           <span className="w-20 text-right text-sm font-bold text-gray-800">
-            $150
+            ${150*qty1}
           </span>
           <button
             type="button"
@@ -84,20 +91,22 @@ function CartRows() {
               type="button"
               aria-label="Decrease quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty2((q) => Math.max(1, q - 1))}
             >
               −
             </button>
-            <span className="min-w-8 text-center text-sm">2</span>
+            <span className="min-w-8 text-center text-sm">{qty2}</span>
             <button
               type="button"
               aria-label="Increase quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty2((q) => q + 1)}
             >
               +
             </button>
           </div>
           <span className="w-20 text-right text-sm font-bold text-gray-800">
-            $440
+            ${440*qty2}
           </span>
           <button
             type="button"
@@ -145,20 +154,22 @@ function CartRows() {
               type="button"
               aria-label="Decrease quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty3((q) => Math.max(1, q - 1))}
             >
               −
             </button>
-            <span className="min-w-8 text-center text-sm">1</span>
+            <span className="min-w-8 text-center text-sm">{qty3}</span>
             <button
               type="button"
               aria-label="Increase quantity"
               className="px-3 py-1 text-gray-600"
+              onClick={() => setQty3((q) => q + 1)}
             >
               +
             </button>
           </div>
           <span className="w-20 text-right text-sm font-bold text-gray-800">
-            $180
+            ${180*qty3}
           </span>
           <button
             type="button"
