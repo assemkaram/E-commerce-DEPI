@@ -8,7 +8,7 @@ function Home({ onAddToCart, search = "" }) {
     <>
       <ProductsSection onAddToCart={onAddToCart} search={search} />
       <FlashSales onAddToCart={onAddToCart} />
-      <Top100 />
+      <Top100 onAddToCart={onAddToCart} />
       <Trending />
     </>
   );

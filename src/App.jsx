@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRef } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/layouts/Navbar";
 import CartView from "./components/cart/CartView";
@@ -8,6 +9,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const cartCountRef = useRef(0);
   // L2 => API Calls
   // L3 => Handler
 
@@ -30,6 +32,7 @@ function App() {
       // Add New Product
       setCart([...cart, { ...product, qty: 1 }]);
     }
+    cartCountRef.current+=1;
   };
 
   const toggleHandler = () => {
@@ -40,16 +43,16 @@ function App() {
     setSearch(event.target.value);
   };
 
-  let cartCount = 0;
-  for (const item of cart) {
-    cartCount += item.qty;
-  }
+  // let cartCount = 0;
+  // for (const item of cart) {
+  //   cartCount += item.qty;
+  // }
 
   // L4 => Jsx
   return (
     <>
       <Navbar
-        cartCount={cartCount}
+        cartCount={cartCountRef.current}
         onCartView={toggleHandler}
         onSearchChange={searchHandler}
         searchValue={search}
