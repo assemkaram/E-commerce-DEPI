@@ -1,3 +1,4 @@
+import { useState } from "react";
 import bag from "../../assets/photo bag.png";
 
 function CartRow({
@@ -8,6 +9,8 @@ function CartRow({
   color,
   onIncrease,
 }) {
+  const [qty1, setQty1] = useState(qty);
+  
   // L4 => View
   return (
     <div className="cart-row flex flex-wrap items-center gap-4">
@@ -25,27 +28,30 @@ function CartRow({
           </div>
         )}
       </div>
-      <span className="w-16 text-sm text-gray-600">${price}</span>
+      <span className="w-16 text-sm text-gray-600">${price*qty1}</span>
       <div className="flex items-center rounded-md border border-gray-300">
         <button
           type="button"
           aria-label="Decrease quantity"
           className="px-3 py-1 text-gray-600"
+          onClick={() => setQty1((q) => Math.max(1, q - 1))}
         >
           −
         </button>
-        <span className="min-w-8 text-center text-sm">{qty}</span>
+        <span className="min-w-8 text-center text-sm">{qty1}</span>
         <button
           type="button"
           aria-label="Increase quantity"
-          onClick={onIncrease}
           className="px-3 py-1 text-gray-600"
+          onClick={() => {setQty1((q) => q + 1);
+              onIncrease;
+          }}
         >
           +
         </button>
       </div>
       <span className="w-20 text-right text-sm font-bold text-gray-800">
-        ${(price * qty).toFixed(2)}
+        ${(price)}
       </span>
       <button type="button" aria-label="Remove item" className="text-gray-600">
         <svg

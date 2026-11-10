@@ -1,52 +1,16 @@
 import Section from "../ui/Section";
 import ProductCard from "../product/ProductCard";
-
-function Top100() {
+import { products } from "../../data/products";
+function Top100({onAddToCart}) {
   // L1 => Data
-  const products = [
-    {
-      id: 1,
-      title: "Mango",
-      price: 280,
-      description: "plaplapla",
-      oldPrice: 300,
-      review: 250,
-      discount: 10,
-    },
-    {
-      id: 2,
-      title: "Mango",
-      price: 280,
-      description: "plaplapla",
-      oldPrice: 300,
-      review: 250,
-      discount: 10,
-    },
-    {
-      id: 3,
-      title: "Mango",
-      price: 280,
-      description: "plaplapla",
-      oldPrice: 300,
-      review: 250,
-      discount: 10,
-    },
-    {
-      id: 4,
-      title: "Mango",
-      price: 280,
-      description: "plaplapla",
-      oldPrice: 300,
-      review: 250,
-      discount: 10,
-    },
-  ];
+  const top100Products = products.slice(5, 8);
+
   // L2 => Effects
   // L3 => Logic
   // L4 => View
   return (
     <Section title="Top 100" classSection="top-100">
-      {products.map((product) => (
+      {top100Products.map((product) => (
         <ProductCard
           key={product.id}
           variant="top"
@@ -56,6 +20,7 @@ function Top100() {
           oldPrice={product.oldPrice}
           review={product.review}
           discount={product.discount}
+          onAddToCart={() => onAddToCart(product)}
         />
       ))}
     </Section>

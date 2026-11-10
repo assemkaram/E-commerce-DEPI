@@ -6,7 +6,7 @@ function Home({ onAddToCart }) {
   return (
     <>
       <FlashSales onAddToCart={onAddToCart} />
-      <Top100 />
+      <Top100 onAddToCart={onAddToCart} />
       <Trending />
     </>
   );

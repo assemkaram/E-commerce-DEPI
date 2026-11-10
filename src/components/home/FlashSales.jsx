@@ -9,7 +9,7 @@ function FlashSales({ onAddToCart }) {
   //   { id: 2, title: "Laptop ", price: 30000 },
   //   { id: 3, title: "Screen ", price: 20000 },
   // ];
-  const flashSalesProducts = products.slice(0, 3);
+  const flashSalesProducts = products.slice(0, 4);
   // L2 => Api Call
   // L3 => Logic
   // L4 => View
