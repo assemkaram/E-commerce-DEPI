@@ -1,4 +1,33 @@
+# 🛒 E-commerce DEPI
 
+An e-commerce storefront built with **React** and **Vite**, developed as part of the DEPI program.
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## 📖 About
+
+A single-page online store where users can browse products, add them to a cart, and complete a purchase. [Adjust this description to match the actual features.]
+
+## ✨ Features
+
+- 🔍 Product listing with search and filtering
+- 🛍️ Shopping cart with quantity updates and running total
+- 📄 Product detail page
+- 📱 Responsive layout for mobile and desktop
+- [Add any other features: authentication, checkout, admin dashboard, etc.]
+
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React | UI library |
+| Vite | Build tool and dev server |
+| ESLint | Code linting |
+| [Additional libraries, e.g. React Router, Context API] | [Purpose] |
+
+## 📁 Project Structure
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -33,23 +62,5 @@ Then open `http://localhost:5173` in your browser.
 | `npm run preview` | Preview the production build locally |
 | `npm run lint` | Run ESLint |
 
-## 🌐 Deployment
 
-[Describe where the app is deployed, e.g. Vercel, Netlify, or GitHub Pages, with short steps.]
 
-## 🤝 Contributing
-
-1. Fork the project
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m "Add your feature"`)
-4. Push the branch (`git push origin feature/your-feature`)
-5. Open a Pull Request
-
-## 👥 Team
-
-- [assemkaram](https://github.com/assemkaram)
-- [Add other team members]
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
