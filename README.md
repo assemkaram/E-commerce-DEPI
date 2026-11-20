@@ -1,16 +1,66 @@
-# React + Vite
+# 🛒 E-commerce DEPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An e-commerce storefront built with **React** and **Vite**, developed as part of the DEPI program.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 About
 
-## React Compiler
+A single-page online store where users can browse products, add them to a cart, and complete a purchase. [Adjust this description to match the actual features.]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 Product listing with search and filtering
+- 🛍️ Shopping cart with quantity updates and running total
+- 📄 Product detail page
+- 📱 Responsive layout for mobile and desktop
+- [Add any other features: authentication, checkout, admin dashboard, etc.]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React | UI library |
+| Vite | Build tool and dev server |
+| ESLint | Code linting |
+| [Additional libraries, e.g. React Router, Context API] | [Purpose] |
+
+## 📁 Project Structure
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm or yarn
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/assemkaram/E-commerce-DEPI.git
+
+# 2. Navigate into the project
+cd E-commerce-DEPI
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+```
+
+Then open `http://localhost:5173` in your browser.
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the production bundle into `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+
+
